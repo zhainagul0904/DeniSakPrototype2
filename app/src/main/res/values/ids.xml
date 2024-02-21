@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="recyclerView" type="id" />
+    <item name="medicineIntakeTextView" type="id" />
+    <item name="waterIntakeTextView" type="id" />
+    <item name="stepsCountTextView" type="id" />
+</resources>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- dashboard_activity.xml -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground">
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Search..."
+        android:background="@drawable/rounded_search_bg"
+        android:padding="12dp"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="8dp"
+        android:inputType="text"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Activity Cards -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchBar"
+        android:layout_marginTop="16dp"
+        android:columnCount="3"
+        android:rowCount="2"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:alignmentMode="alignMargins">
+
+        <!-- Card 1: Daily Symptom Logs -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/DashboardCardStyle">
+
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_daily_logs"
+                android:layout_gravity="center_horizontal"/>
+
+            <!-- Add your content for Daily Symptom Logs Card here -->
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card 2: Challenges -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/DashboardCardStyle">
+
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_challenges"
+                android:layout_gravity="center_horizontal"/>
+
+            <!-- Add your content for Challenges Card here -->
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card 3: Personal Insights -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/DashboardCardStyle">
+
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_articles"
+                android:layout_gravity="center_horizontal"/>
+
+            <!-- Add your content for Personal Insights Card here -->
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card 4: Articles -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/DashboardCardStyle">
+
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_articles"
+                android:layout_gravity="center_horizontal"/>
+
+            <!-- Add your content for Articles Card here -->
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card 5: Exercises -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/DashboardCardStyle">
+
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_exercises"
+                android:layout_gravity="center_horizontal"/>
+
+            <!-- Add your content for Profile Settings Card here -->
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card 6: Profile Settings -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/DashboardCardStyle">
+
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_profile_settings"
+                android:layout_gravity="center_horizontal"/>
+
+            <!-- Add your content for Profile Settings Card here -->
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </GridLayout>
+
+    <!-- Bottom Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/gridLayout"
+        android:layout_marginTop="16dp">
+
+        <!-- Health Tips Carousel -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerHealthTips"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@android:color/darker_gray"/>
+
+        <!-- Interactive Widgets -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- Steps Widget -->
+            <com.example.denisakprototype2.widgets.StepsWidget
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <!-- Water Intake Widget -->
+            <com.example.denisakprototype2.widgets.WaterIntakeWidget
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <!-- Medicine Intake Widget -->
+            <com.example.denisakprototype2.widgets.MedicineIntakeWidget
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:clipToPadding="false"
+                android:scrollbars="vertical" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

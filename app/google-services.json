@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "310835217059",
+    "project_id": "denisak-d3eb1",
+    "storage_bucket": "denisak-d3eb1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310835217059:android:8a793d9f24f79996f2f516",
+        "android_client_info": {
+          "package_name": "com.example.denisakprototype2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYVtdOmFoUM6VhBNO5NjkGCYHu5K2XhnM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
